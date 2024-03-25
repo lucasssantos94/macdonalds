@@ -263,6 +263,7 @@ Error generating stack: `+o.message+`
   justify-content: center;
   align-items: center;
   .closeModal {
+    cursor: pointer;
     position: absolute;
     right: 2rem;
     top: 0;
