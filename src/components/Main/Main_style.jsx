@@ -127,7 +127,7 @@ export const Modal = styled.div`
   .closeModal {
     cursor: pointer;
     position: absolute;
-    right: 2rem;
-    top: 0;
+    right: 3rem;
+    top: 1rem;
   }
 `
