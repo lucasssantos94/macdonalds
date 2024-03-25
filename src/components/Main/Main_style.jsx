@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flex, responsive } from "../../styles/mixins";
+import { flex, flexColumn, responsive } from "../../styles/mixins";
 
 export const BoxMain = styled.main`
     background-color: #FFC72C;
@@ -9,6 +9,9 @@ export const IntroProduct = styled.section`
     & > :first-child {
         ${flex}
         ${responsive.mobile`
+            flex-direction: column-reverse
+        `}
+          ${responsive.mobileSmall`
             flex-direction: column-reverse
         `}
     }
@@ -26,6 +29,11 @@ export const BoxText = styled.div`
         span{
             color: red;
         }
+        ${responsive.mobileSmall`
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 4rem
+        `}
         ${responsive.mobile`
             font-size: 4rem;
             text-align: center;
@@ -50,6 +58,9 @@ export const BoxProducts = styled.div`
        justify-content: space-around;
        margin: 4rem auto;
     `}
+      ${responsive.mobileSmall`
+       margin: 2rem auto;
+    `}
 `
 
 export const BoxProduct = styled.div`
@@ -62,6 +73,9 @@ export const BoxPromotion = styled.section`
     h2 {
         text-align: center;
         font-size: 3.6rem;
+        ${responsive.mobileSmall`
+            font-size: 3rem
+        `}
     }
 `
 
@@ -69,6 +83,11 @@ export const BoxCards = styled.div`
     width: 100%;
     ${flex}
     margin-top: 7rem;
+    ${responsive.mobileSmall`
+        margin-top: 2rem;
+        ${flexColumn}
+        gap: 4rem;
+    `}
     ${responsive.mobile`
         margin-top: 4rem;
         flex-direction: column;

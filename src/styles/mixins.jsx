@@ -4,7 +4,8 @@ const devices = {
     desktop: '1440px',
     laptop: '1140px',
     tablet: '960px',
-    mobile: '540px'
+    mobile: '540px',
+    mobileSmall: '375px'
 }
 
 export const responsive = {
@@ -33,9 +34,15 @@ export const responsive = {
         }
     `,
 
-    // resolução até 540px
+    // resolução entre 375px e 540px
     mobile: (...args) => css`
-        @media screen and (max-width: ${devices.mobile}){
+        @media screen and (max-width: ${devices.mobile}) and (min-width: ${devices.mobileSmall}){
+            ${css(...args)}
+        }
+    `,
+    // resolução até 375px
+    mobileSmall: (...args) => css`
+        @media screen and (max-width: ${devices.mobileSmall}) {
             ${css(...args)}
         }
     `
@@ -45,4 +52,11 @@ export const flex = css`
     display: flex;
     align-items: center;
     justify-content: space-between;
+`
+
+export const flexColumn = css`
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 `

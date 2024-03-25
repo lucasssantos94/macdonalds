@@ -19,5 +19,8 @@ export const BoxHeader = styled.header`
        ${responsive.mobile`
         height: 10vh;
     `}
+    ${responsive.mobileSmall`
+        height: 15vh;
+    `}
 
 `

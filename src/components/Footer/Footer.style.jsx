@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flex, responsive } from "../../styles/mixins";
+import { flex, flexColumn, responsive } from "../../styles/mixins";
 
 export const BoxFooter = styled.footer`
     & > div {
@@ -9,6 +9,11 @@ export const BoxFooter = styled.footer`
             height: 8vh;
             flex-direction: column;
             gap: 2rem;
+        `}
+        ${responsive.mobileSmall`
+            ${flexColumn}
+            gap: 2rem;
+            padding-bottom: 2rem
         `}
     }
 `

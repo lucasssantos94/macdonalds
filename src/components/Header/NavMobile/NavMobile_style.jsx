@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flex } from "../../../styles/mixins";
+import { flex, responsive } from "../../../styles/mixins";
 
 const BoxNavMobile = styled.nav`
     div{
@@ -23,6 +23,9 @@ const BoxNavMobile = styled.nav`
             color: #FFC72C;
             padding: 1rem;
         }
+        ${responsive.mobileSmall`
+            top: 15vh
+        `}
     }
 `
 export default BoxNavMobile
