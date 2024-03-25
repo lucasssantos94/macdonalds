@@ -265,8 +265,8 @@ Error generating stack: `+o.message+`
   .closeModal {
     cursor: pointer;
     position: absolute;
-    right: 2rem;
-    top: 0;
+    right: 3rem;
+    top: 1rem;
   }
 `,Ea="/macdonalds/assets/bigmac-BmiMj0mz.svg",S0="/macdonalds/assets/batata-DWaAkgKM.png",k0="/macdonalds/assets/sorvete-CIUSh6ve.png",x0="/macdonalds/assets/card1-Ds_ZKoHT.png",C0="/macdonalds/assets/card2-jHHKNRLw.png",E0="/macdonalds/assets/card3-BtI_mZP5.png",A0="/macdonalds/assets/cupom-ew6pCr92.png",P0="/macdonalds/assets/cupom-mobile-Bv7ERskY.png";function N0(){const e=[Ea,S0,k0],[t,n]=We.useState(Ea),[r,l]=We.useState(!1),o=s=>n(s.target.src),i=[{image:x0,title:"Que tal um #MéquiNoSofá?"},{image:C0,title:"venha conhecer nossa nova loja"},{image:E0,title:"Confira as medidas que o Méqui adotou!"}],u=()=>{l(!1),document.body.classList.remove("open-modal")};return We.useEffect(()=>{setTimeout(()=>{l(!0),document.body.classList.add("open-modal")},3e3)},[]),P.jsxs(c0,{children:[r?P.jsxs(w0,{children:[P.jsx("img",{src:md,alt:"",className:"closeModal",onClick:u}),window.innerWidth<540?P.jsx("img",{src:P0,alt:""}):P.jsx("img",{src:A0,alt:""})]}):null,P.jsxs(f0,{children:[P.jsxs(Dr,{children:[P.jsx(d0,{children:P.jsx("img",{src:t,alt:""})}),P.jsx(p0,{children:P.jsxs("h1",{children:["BATEU AQUELA ",P.jsx("span",{children:"#FOME"})," DE ",P.jsx("span",{children:"MÉQUI?"})]})})]}),P.jsx(h0,{children:e.map((s,a)=>P.jsx(m0,{children:P.jsx("img",{src:s,alt:"",onClick:o})},a))})]}),P.jsx(v0,{children:P.jsxs(Dr,{children:[P.jsx("h2",{children:"Promoção"}),P.jsx(g0,{children:i.map((s,a)=>P.jsxs(y0,{children:[P.jsx("img",{src:s.image,alt:""}),P.jsx("h3",{children:s.title}),P.jsx("button",{children:"Clique aqui"})]},a))})]})})]})}const z0=Ym`
     * {
