@@ -1,6 +1,7 @@
-import Container from "../container";
-import { BoxCards, BoxImage, BoxMain, BoxProduct, BoxProducts, BoxPromotion, BoxText, Card, IntroProduct, Modal } from "./Main_style";
 import { useEffect, useState } from "react";
+
+import Container from "../container";
+import * as Style from './Main_style'
 
 import bigMac from '../../assets/bigmac.svg'
 import batata from '../../assets/batata.png'
@@ -49,50 +50,50 @@ export default function Main() {
 
     // document.body.style.opacity = 0.2
     return (
-        <BoxMain>
-            {renderModal ? <Modal>
+        <Style.BoxMain>
+            {renderModal ? <Style.Modal>
                 <img src={closeModal} alt="" className="closeModal" onClick={handleModal} />
-                {window.innerWidth < 540 ? <img src={imageMobileModal} alt="" /> : <img src={imageModal} alt="" />}
+                {window.innerWidth < 540 ? <img src={imageMobileModal} alt="imagem desconto app" /> : <img src={imageModal} alt="imagem desconto app" />}
 
-            </Modal> : null}
-            <IntroProduct>
+            </Style.Modal> : null}
+            <Style.IntroProduct>
                 <Container>
-                    <BoxImage>
-                        <img src={selectProduct} alt="" />
-                    </BoxImage>
+                    <Style.BoxImage>
+                        <img src={selectProduct} alt="produto macdonalds" />
+                    </Style.BoxImage>
 
-                    <BoxText>
+                    <Style.BoxText>
                         <h1>
                             BATEU AQUELA <span>#FOME</span> DE <span>MÉQUI?</span>
                         </h1>
-                    </BoxText>
+                    </Style.BoxText>
                 </Container>
 
-                <BoxProducts>
+                <Style.BoxProducts>
                     {products.map((product, index) => (
-                        <BoxProduct key={index}>
-                            <img src={product} alt="" onClick={handleProduct} />
-                        </BoxProduct>
+                        <Style.BoxProduct key={index}>
+                            <img src={product} alt="produto macdonalds" onClick={handleProduct} />
+                        </Style.BoxProduct>
                     ))}
-                </BoxProducts>
-            </IntroProduct>
+                </Style.BoxProducts>
+            </Style.IntroProduct>
 
-            <BoxPromotion>
+            <Style.BoxPromotion>
                 <Container>
                     <h2>Promoção</h2>
 
-                    <BoxCards>
+                    <Style.BoxCards>
                         {infoCards.map((card, index) => (
-                            <Card key={index}>
-                                <img src={card.image} alt="" />
+                            <Style.Card key={index}>
+                                <img src={card.image} alt="card macdonalds" />
                                 <h3>{card.title}</h3>
 
                                 <button>Clique aqui</button>
-                            </Card>
+                            </Style.Card>
                         ))}
-                    </BoxCards>
+                    </Style.BoxCards>
                 </Container>
-            </BoxPromotion>
-        </BoxMain>
+            </Style.BoxPromotion>
+        </Style.BoxMain>
     )
 }
